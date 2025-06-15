@@ -1,7 +1,20 @@
 import plotly.graph_objects as go
 import networkx as nx
-
+#Importancion de funcion de visualizacion con Plotly
 def create_interactive_graph(G, y, predictions=None, node_features=None, title="Karate Club - Grafo Interactivo"):
+    """Crea una visualización interactiva con Plotly del grafo.
+
+    Parámetros:
+        - G (networkx.Graph): Grafo a visualizar.
+        - y (list/array): Etiquetas verdaderas de los nodos.
+        - predictions (list/array, opcional): Predicciones del modelo para comparar.
+        - node_features (list/array, opcional): Características mostradas en hover.
+        - title (str): Título del gráfico.
+
+    Retorna:
+        - fig (plotly.graph_objs.Figure): Figura interactiva.
+    """
+    # Calcular posición de nodos con spring layout
     pos = nx.spring_layout(G, seed=42, k=1, iterations=50)
     x_nodes = [pos[i][0] for i in G.nodes()]
     y_nodes = [pos[i][1] for i in G.nodes()]
@@ -12,13 +25,13 @@ def create_interactive_graph(G, y, predictions=None, node_features=None, title="
         y_edges += [pos[edge[0]][1], pos[edge[1]][1], None]
 
     fig = go.Figure()
-
+    # Trazar aristas
     fig.add_trace(go.Scatter(
         x=x_edges, y=y_edges, mode='lines',
         line=dict(width=1.5, color='rgba(125, 125, 125, 0.4)'),
         hoverinfo='none', showlegend=False
     ))
-
+    # Preparar texto para hover
     hover_text = []
     for i in G.nodes():
         degree = G.degree(i)
@@ -29,7 +42,7 @@ def create_interactive_graph(G, y, predictions=None, node_features=None, title="
         if node_features is not None:
             hover += f"<br>Feature: {node_features[i]:.3f}"
         hover_text.append(hover)
-
+    # Definir colores y tamaños según predicción o grado
     colors = []
     for i in G.nodes():
         if predictions is None:
@@ -39,13 +52,10 @@ def create_interactive_graph(G, y, predictions=None, node_features=None, title="
                 colors.append('blue' if y[i] == 0 else 'red')
             else:
                 colors.append('orange')
-
     node_sizes = [G.degree(i) * 3 + 10 for i in G.nodes()]
-
-    fig.add_trace(go.Scatter(
-        x=x_nodes, y=y_nodes,
-        mode='markers+text',
-        marker=dict(size=node_sizes, color=colors, line=dict(width=2, color='white'), opacity=0.8),
+    # Trazar nodos
+    fig.add_trace(go.Scatter(x=x_nodes, y=y_nodes,mode='markers+text',marker=dict(size=node_sizes, color=colors, 
+        line=dict(width=2, color='white'), opacity=0.8),
         text=[str(i) for i in G.nodes()], textposition="middle center",
         textfont=dict(color="white", size=10),
         hovertext=hover_text, hovertemplate='%{hovertext}<extra></extra>'

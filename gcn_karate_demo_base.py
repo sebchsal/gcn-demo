@@ -13,6 +13,11 @@ import seaborn as sns
 import warnings
 warnings.filterwarnings('ignore')
 
+"""
+Prompt utilizado para la extracción de la base de la demo
+“Ahora dame otro ejemplo sencillo para realizar una demo sencilla enfocado en 
+las GCN siendo esta una clasificación de nodos, dame las fuentes para basarme en el ejemplo.”
+"""
 class SimpleGCN(nn.Module):
     """
     GCN simplificada para el Karate Club

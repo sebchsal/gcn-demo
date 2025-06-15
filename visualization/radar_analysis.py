@@ -1,12 +1,27 @@
 import networkx as nx
 import plotly.graph_objects as go
-
+#Importancion de funcion de visualizacion con Plotly
 def create_network_statistics_radar(G, node_analysis=None):
+    """Crea un diagrama de radar con estadísticas globales de la red:
+        - Clustering promedio
+        - Densidad
+        - Camino promedio normalizado
+        - Diámetro normalizado
+        - Modularidad (valor de ejemplo)
+        - Asortatividad
+
+    Args:
+        - G (networkx.Graph): Grafo de análisis.
+        - node_analysis (pd.DataFrame, opcional): Métricas por nodo (no usado aquí).
+
+    Retorna:
+        - fig (plotly.graph_objs.Figure): Figura del radar.
+    """
     avg_clustering = nx.average_clustering(G)
     density = nx.density(G)
     avg_path_length = nx.average_shortest_path_length(G)
     diameter = nx.diameter(G)
-    modularity = 0.8  # Estimación manual
+    modularity = 0.8  # Valor de ejemplo
     assortativity = abs(nx.degree_assortativity_coefficient(G))
 
     metrics = {
