@@ -47,4 +47,8 @@ Este proyecto usa las siguientes bibliotecas principales:
 
 ---
 
-Desarrollado por [TuNombre]
+Desarrollado por:
+- Gloriana Mojica Rojas
+- Sebastian Chaves Salazar
+- Priscilla Murillo Romero
+- Naara Menjívar Ramirez
