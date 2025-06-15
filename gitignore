@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Entornos virtuales
+env/
+venv/
+.venv/
+
+# Archivos temporales
+*.log
+*.tmp
+*.bak
+*.swp
+
+# IDEs
+.vscode/
+.idea/
+
+# Jupyter y plotly
+.ipynb_checkpoints/
+.plotly/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos generados
+*.png
+*.pdf
+*.svg
+*.eps
+*.out
+*.pth
+/mnt/data/
