@@ -1,5 +1,5 @@
 # GCN Karate Club Demo
-Esta demo implementa una Red Neuronal de Grafos Convolucionales (GCN) para clasificar los nodos del famoso grafo del Karate Club de Zachary usando PyTorch Geometric.
+Esta demo implementa una Red Neuronal de Grafos Convolucionales (GCN) para clasificar los nodos del famoso grafo del Karate Club de Zachary usando PyTorch Geometric. Fue desarollada en python y utilzando Visual Studio Code como editor de texto
 
 ## Estructura del Proyecto
 ```
