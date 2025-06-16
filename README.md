@@ -64,10 +64,10 @@ Link documentación: https://plotly.github.io/plotly.py-docs/generated/plotly.gr
 5. plotly.graph_objects.Heatmap:
 Traza para mapas de calor (tiles coloreados según valores en matriz).
 Link documentación: https://plotly.github.io/plotly.py-docs/generated/plotly.graph_objects.Heatmap
-6. plotly.graph_objects.Table
+6. plotly.graph_objects.Table:
 Traza para tablas interactivas (celdas y encabezados formateables).
 Link documentación: https://plotly.github.io/plotly.py-docs/generated/plotly.graph_objects.Table
-7. plotly.graph_objects.Scatterpolar
+7. plotly.graph_objects.Scatterpolar:
 Traza para diagramas radiales (radar charts), usada en create_network_statistics_radar.
 Link documentación: https://plotly.com/python-api-reference/
 ---
