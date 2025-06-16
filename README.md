@@ -45,6 +45,31 @@ Este proyecto usa las siguientes bibliotecas principales:
   - `PCA`: para reducir embeddings a 2D.
 - **pandas** y **numpy**: manipulación de datos.
 
+## Documentacion utilizada de Plolty para los aportes
+1. plotly.subplots.make_subplots:
+Crea un objeto Figure con un layout de subplots (filas, columnas, tipos de ejes, títulos, etc.).
+Link documentación: https://plotly.com/python-api-reference/generated/plotly.subplots.make_subplots
+2. plotly.graph_objects.Figure:
+Contenedor principal de Plotly: almacena las “trazas” (gráficos) y el layout (títulos, márgenes, ejes).
+Link documentación: https://plotly.com/python/graph-objects/
+3. plotly.graph_objects.Scatter:
+Traza para gráficos de dispersión (puntos, líneas, texto). Se usan en:
+- Líneas de conexión en el grafo interactivo
+- Scatter centralidad vs confianza
+- Scatter grado vs confianza
+Link documentación: https://plotly.com/python-api-reference/generated/plotly.graph_objects.Scatter
+4. plotly.graph_objects.Histogram:
+Traza para histogramas de distribución (barras verticales u horizontales).
+Link documentación: https://plotly.github.io/plotly.py-docs/generated/plotly.graph_objects.Histogram
+5. plotly.graph_objects.Heatmap:
+Traza para mapas de calor (tiles coloreados según valores en matriz).
+Link documentación: https://plotly.github.io/plotly.py-docs/generated/plotly.graph_objects.Heatmap
+6. plotly.graph_objects.Table
+Traza para tablas interactivas (celdas y encabezados formateables).
+Link documentación: https://plotly.github.io/plotly.py-docs/generated/plotly.graph_objects.Table
+7. plotly.graph_objects.Scatterpolar
+Traza para diagramas radiales (radar charts), usada en create_network_statistics_radar.
+Link documentación: https://plotly.com/python-api-reference/
 ---
 
 Desarrollado por:
