@@ -1,6 +1,6 @@
 import plotly.graph_objects as go
 import networkx as nx
-#Importancion de funcion de visualizacion con Plotly
+#Aporte de funcion de visualizacion con Plotly
 def create_interactive_graph(G, y, predictions=None, node_features=None, title="Karate Club - Grafo Interactivo"):
     """Crea una visualización interactiva con Plotly del grafo.
 

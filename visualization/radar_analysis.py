@@ -1,6 +1,6 @@
 import networkx as nx
 import plotly.graph_objects as go
-#Importancion de funcion de visualizacion con Plotly
+#Aporte de funcion de visualizacion con Plotly
 def create_network_statistics_radar(G, node_analysis=None):
     """Crea un diagrama de radar con estadísticas globales de la red:
         - Clustering promedio

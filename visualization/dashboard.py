@@ -2,7 +2,7 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import numpy as np
 from sklearn.metrics import confusion_matrix
-#Importancion de funcion de visualizacion con Plotly
+#Aporte de funcion de visualizacion con Plotly
 def create_comprehensive_dashboard(train_losses, train_accuracies, node_analysis, y, predictions, G):
     """Genera un panel con múltiples análisis:
         1) Curva de pérdida de entrenamiento
